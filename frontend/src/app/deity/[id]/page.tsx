@@ -2,7 +2,7 @@ import BottomNav from "@/components/BottomNav";
 import { getDeity } from "@/lib/api";
 import Link from "next/link";
 
-export default async function DeityDetailPage({ params }: { params: { id: string } }) {
+export default async function DeityDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const deity = await getDeity(id).catch(() => null);
 

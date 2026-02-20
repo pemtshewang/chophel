@@ -16,9 +16,9 @@ const BottomNav = ({ activeTab }: { activeTab: string }) => {
           <span className="material-symbols-outlined text-2xl">bookmarks</span>
           <span className="text-[10px] font-medium">Saved</span>
         </Link>
-        <Link href="/design" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'design' ? 'text-primary-crimson' : 'text-stone-500'}`}>
-          <span className="material-symbols-outlined text-2xl">settings</span>
-          <span className="text-[10px] font-medium">Design</span>
+        <Link href="/profile" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'profile' ? 'text-primary-crimson' : 'text-stone-500'}`}>
+          <span className="material-symbols-outlined text-2xl">account_circle</span>
+          <span className="text-[10px] font-medium">Profile</span>
         </Link>
       </div>
     </nav>
