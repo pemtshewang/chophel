@@ -1,0 +1,8 @@
+# Binaries
+server
+backend
+*.exe
+*.test
+
+# Logs
+*.log

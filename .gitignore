@@ -1,1 +1,14 @@
 database
+# Node.js
+node_modules/
+.next/
+out/
+build/
+*.log
+
+# Go
+backend/server
+backend/backend
+
+# OS
+.DS_Store

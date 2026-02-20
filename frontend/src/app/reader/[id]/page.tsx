@@ -1,7 +1,7 @@
 import { getPrayer } from "@/lib/api";
 import ReaderClient from "@/components/reader/ReaderClient";
 
-export default async function ReaderPage({ params }: { params: { id: string } }) {
+export default async function ReaderPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const prayer = await getPrayer(id).catch(() => null);
 
