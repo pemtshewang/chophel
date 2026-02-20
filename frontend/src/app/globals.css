@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-crimson: #d41111;
+  --color-primary-gold: #f4c025;
+  --color-primary-saffron: #ecb613;
+  --color-gold: #C5A059;
+  --color-gold-light: #F2E8C9;
+  --color-parchment: #F9F7F0;
+  --color-wood: #4A2C2C;
+  --color-wood-light: #6D4C4C;
+
+  --color-monastery-bg: #120608;
+  --color-monastery-surface: #2A0A0F;
+  --color-monastery-nav: #1A0505;
+  --color-ivory: #FFF3DC;
+  --color-tibetan-gold: #E8C46A;
+  --color-saffron: #FFB347;
+  --color-saffron-glow: #FFA500;
+  --color-amber-glow: rgba(255, 191, 0, 0.15);
+
+  --color-surface-dark: #242018;
+  --color-crimson-dark: #3a1315;
+  --color-background-light: #F9F7F0;
+  --color-background-dark: #221010;
+
+  --font-display: "Noto Serif", serif;
+  --font-sans: "Noto Sans", sans-serif;
+  --font-tibetan: "Noto Serif Tibetan", serif;
+
+  --shadow-candle: 0 0 30px rgba(232, 196, 106, 0.08);
+  --shadow-gold-rim: 0 0 0 1px rgba(232, 196, 106, 0.3);
+  --shadow-lotus: 0 4px 20px rgba(232, 196, 106, 0.4);
+  --shadow-glow: 0 0 15px -3px rgba(244, 192, 37, 0.3);
+  --shadow-glow-strong: 0 0 20px -2px rgba(244, 192, 37, 0.5);
+}
+
+:root {
+  --background: #F9F7F0;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #221010;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.text-tibetan {
+  font-family: "Noto Serif Tibetan", serif;
+  line-height: 1.4;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

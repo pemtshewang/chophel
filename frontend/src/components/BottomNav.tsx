@@ -1,0 +1,28 @@
+import Link from 'next/link';
+
+const BottomNav = ({ activeTab }: { activeTab: string }) => {
+  return (
+    <nav className="fixed bottom-0 w-full bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 pb-safe pt-2 px-2 z-40 max-w-md mx-auto left-0 right-0">
+      <div className="flex justify-around items-end pb-3">
+        <Link href="/" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'home' ? 'text-primary-crimson' : 'text-stone-500'}`}>
+          <span className="material-symbols-outlined text-2xl">temple_buddhist</span>
+          <span className="text-[10px] font-medium">Home</span>
+        </Link>
+        <Link href="/categories" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'categories' ? 'text-primary-crimson' : 'text-stone-500'}`}>
+          <span className="material-symbols-outlined text-2xl">grid_view</span>
+          <span className="text-[10px] font-medium">Categories</span>
+        </Link>
+        <Link href="/my-book" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'my-book' ? 'text-primary-crimson' : 'text-stone-500'}`}>
+          <span className="material-symbols-outlined text-2xl">bookmarks</span>
+          <span className="text-[10px] font-medium">Saved</span>
+        </Link>
+        <Link href="/design" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'design' ? 'text-primary-crimson' : 'text-stone-500'}`}>
+          <span className="material-symbols-outlined text-2xl">settings</span>
+          <span className="text-[10px] font-medium">Design</span>
+        </Link>
+      </div>
+    </nav>
+  );
+};
+
+export default BottomNav;
