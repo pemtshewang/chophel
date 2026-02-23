@@ -1,5 +1,12 @@
 import Link from 'next/link';
 
+const navItems = [
+  { href: '/', key: 'home', icon: 'temple_buddhist', label: 'Library' },
+  { href: '/categories', key: 'categories', icon: 'grid_view', label: 'Categories' },
+  { href: '/my-book', key: 'my-book', icon: 'bookmarks', label: 'My Book' },
+  { href: '/profile', key: 'profile', icon: 'account_circle', label: 'Profile' },
+] as const;
+
 const BottomNav = ({ activeTab }: { activeTab: string }) => {
   return (
     <nav className="fixed bottom-0 w-full bg-white/95 dark:bg-stone-900/95 backdrop-blur-md border-t border-stone-200 dark:border-stone-800 pb-safe pt-2 px-2 z-40 left-0 right-0 md:hidden">
