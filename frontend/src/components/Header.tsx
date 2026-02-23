@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header className={`sticky top-0 z-50 ${className || defaultBg}`}>
       {!transparent && !className && <div className="h-1.5 w-full bg-gradient-to-r from-wood via-primary-gold to-wood"></div>}
-      <div className={`px-4 ${transparent ? 'py-4' : 'py-3'} flex items-center justify-between`}>
+      <div className={`px-4 md:px-8 ${transparent ? 'py-4' : 'py-3'} flex items-center justify-between`}>
         <div className="flex items-center gap-3">
           {showBack ? (
             <Link
