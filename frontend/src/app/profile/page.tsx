@@ -1,4 +1,5 @@
 import BottomNav from "@/components/BottomNav";
+import Header from "@/components/Header";
 import Link from "next/link";
 
 export default function ProfilePage() {
@@ -12,10 +13,16 @@ export default function ProfilePage() {
 
   return (
     <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative">
-      {/* Top Header */}
-      <header className="pt-12 pb-6 px-6 bg-parchment dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800">
-        <h1 className="text-2xl font-bold text-wood dark:text-stone-200">User Profile</h1>
-      </header>
+      <Header
+        title="Profile"
+        subtitle="གང་ཟག་གི་གནས་ཚུལ།"
+        showLogo={true}
+        actions={
+          <button className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-wood/5 dark:hover:bg-primary-gold/10 text-wood dark:text-primary-gold transition-colors">
+            <span className="material-symbols-outlined">settings</span>
+          </button>
+        }
+      />
 
       <main className="flex-1 overflow-y-auto pb-24">
         {/* User Info Section */}
@@ -32,7 +39,7 @@ export default function ProfilePage() {
               <span className="material-symbols-outlined text-sm">edit</span>
             </button>
           </div>
-          <h2 className="text-xl font-bold text-wood dark:text-stone-100">Dharma Practitioner</h2>
+          <h2 className="font-display text-xl font-bold text-wood dark:text-stone-100">Dharma Practitioner</h2>
           <p className="text-sm text-stone-500 dark:text-stone-400">practitioner@chopel.org</p>
         </section>
 

@@ -1,4 +1,5 @@
 import BottomNav from "@/components/BottomNav";
+import Header from "@/components/Header";
 import { getDeity } from "@/lib/api";
 import Link from "next/link";
 
@@ -10,15 +11,17 @@ export default async function DeityDetailPage({ params }: { params: Promise<{ id
 
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden max-w-md mx-auto shadow-2xl relative min-h-screen flex flex-col">
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-gradient-to-b from-black/80 to-transparent max-w-md mx-auto">
-        <Link href="/categories" className="text-white flex size-10 items-center justify-center rounded-full bg-black/20 backdrop-blur-sm">
-          <span className="material-symbols-outlined">arrow_back</span>
-        </Link>
-        <h1 className="text-white text-lg font-bold tracking-tight drop-shadow-md opacity-90">Chöpel</h1>
-        <button className="text-white flex size-10 items-center justify-center rounded-full bg-black/20 backdrop-blur-sm">
-          <span className="material-symbols-outlined">share</span>
-        </button>
-      </header>
+      <Header
+        title="Chöpel"
+        showBack={true}
+        backHref="/categories"
+        transparent={true}
+        actions={
+          <button className="text-white flex size-10 items-center justify-center rounded-full bg-black/20 backdrop-blur-sm active:bg-black/40 transition-colors">
+            <span className="material-symbols-outlined">share</span>
+          </button>
+        }
+      />
 
       <div className="relative w-full h-[50vh] min-h-[400px]">
         <div
@@ -32,19 +35,19 @@ export default async function DeityDetailPage({ params }: { params: Promise<{ id
               Deity
             </span>
           </div>
-          <h1 className="text-3xl font-bold text-white mb-1 drop-shadow-lg leading-tight">{deity.name}</h1>
-          <h2 className="text-2xl text-gold font-normal mb-4 opacity-90 font-tibetan">{deity.tibetan}</h2>
+          <h1 className="font-display text-3xl font-bold text-white mb-1 drop-shadow-lg leading-tight">{deity.name}</h1>
+          <h2 className="text-2xl text-primary-gold font-normal mb-4 opacity-90 font-tibetan">{deity.tibetan}</h2>
         </div>
       </div>
 
       <div className="flex-1 relative z-10 -mt-4 bg-background-dark rounded-t-3xl border-t border-white/5 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] pb-24">
         <div className="px-6 py-8">
-          <h3 className="text-gold text-lg font-bold mb-2">{deity.lineage}</h3>
+          <h3 className="font-display text-primary-gold text-lg font-bold mb-2">{deity.lineage}</h3>
           <p className="text-slate-300 text-base leading-relaxed opacity-90">{deity.description}</p>
         </div>
 
         <div className="px-4">
-          <h3 className="text-white text-lg font-bold mb-4 px-2">Prayers & Mantras</h3>
+          <h3 className="font-display text-white text-lg font-bold mb-4 px-2">Prayers & Mantras</h3>
           <div className="space-y-3">
             {deity.prayers?.map((prayer) => (
               <Link href={`/reader/${prayer.id}`} key={prayer.id}>
@@ -53,7 +56,7 @@ export default async function DeityDetailPage({ params }: { params: Promise<{ id
                     <span className="material-symbols-outlined">{prayer.icon}</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-white font-bold text-base truncate pr-2">{prayer.title}</h4>
+                    <h4 className="font-display text-white font-bold text-base truncate pr-2">{prayer.title}</h4>
                     <p className="text-slate-400 text-sm font-sans mt-0.5 truncate">{prayer.description}</p>
                   </div>
                 </div>

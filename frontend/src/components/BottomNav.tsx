@@ -6,7 +6,7 @@ const BottomNav = ({ activeTab }: { activeTab: string }) => {
       <div className="flex justify-around items-end pb-3">
         <Link href="/" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'home' ? 'text-primary-crimson' : 'text-stone-500'}`}>
           <span className="material-symbols-outlined text-2xl">temple_buddhist</span>
-          <span className="text-[10px] font-medium">Home</span>
+          <span className="text-[10px] font-medium">Library</span>
         </Link>
         <Link href="/categories" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'categories' ? 'text-primary-crimson' : 'text-stone-500'}`}>
           <span className="material-symbols-outlined text-2xl">grid_view</span>
@@ -14,7 +14,7 @@ const BottomNav = ({ activeTab }: { activeTab: string }) => {
         </Link>
         <Link href="/my-book" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'my-book' ? 'text-primary-crimson' : 'text-stone-500'}`}>
           <span className="material-symbols-outlined text-2xl">bookmarks</span>
-          <span className="text-[10px] font-medium">Saved</span>
+          <span className="text-[10px] font-medium">My Book</span>
         </Link>
         <Link href="/profile" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'profile' ? 'text-primary-crimson' : 'text-stone-500'}`}>
           <span className="material-symbols-outlined text-2xl">account_circle</span>

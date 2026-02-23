@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Prayer } from "@/lib/api";
+import Header from "@/components/Header";
 
 export default function ReaderClient({ prayer }: { prayer: Prayer }) {
   const [count, setCount] = useState(21);
@@ -10,21 +10,21 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
   const [lang, setLang] = useState<"tib" | "pho" | "eng">("tib");
 
   return (
-    <div className={`font-display transition-colors duration-300 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative ${theme === 'monastery' ? 'bg-monastery-bg text-ivory' : 'bg-background-light text-text-main'}`}>
-      <header className={`sticky top-0 z-50 backdrop-blur-sm border-b px-4 h-16 flex items-center justify-between transition-colors ${theme === 'monastery' ? 'bg-monastery-nav/95 border-tibetan-gold/30' : 'bg-background-light/95 border-stone-200'}`}>
-        <Link href="/" className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
-          <span className="material-symbols-outlined text-[28px]">chevron_left</span>
-        </Link>
-        <div className="flex flex-col items-center justify-center">
-          <h1 className={`text-base font-bold leading-tight ${theme === 'monastery' ? 'text-tibetan-gold' : 'text-text-main'}`}>{prayer.title}</h1>
-          <span className="text-xs font-tibetan opacity-70">{prayer.tibetan}</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+    <div className={`font-display transition-colors duration-300 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative ${theme === 'monastery' ? 'bg-monastery-bg text-ivory' : 'bg-background-light text-wood'}`}>
+      <Header
+        title={prayer.title}
+        subtitle={prayer.tibetan}
+        showBack={true}
+        backHref="/"
+        className={theme === 'monastery' ? 'bg-monastery-nav/95 border-b border-tibetan-gold/30' : 'bg-background-light/95 border-b border-stone-200'}
+        titleClassName={theme === 'monastery' ? 'text-tibetan-gold' : 'text-wood'}
+        subtitleClassName={theme === 'monastery' ? 'text-ivory/70' : 'text-stone-500'}
+        actions={
+          <button className={`flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors ${theme === 'monastery' ? 'text-tibetan-gold' : 'text-wood'}`}>
             <span className="material-symbols-outlined text-[24px]">bookmark_border</span>
           </button>
-        </div>
-      </header>
+        }
+      />
 
       <div className={`border-b px-4 py-3 flex flex-col gap-3 transition-colors ${theme === 'monastery' ? 'bg-monastery-surface border-white/10' : 'bg-white border-stone-200'}`}>
         <div className="flex items-center justify-between gap-2">
@@ -57,7 +57,7 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
             <article className="flex flex-col gap-4 text-center">
               <div className="space-y-4">
                 {(lang === 'tib' || lang === 'pho' || lang === 'eng') && (
-                  <p className={`text-2xl leading-relaxed font-tibetan ${theme === 'monastery' ? 'text-tibetan-gold' : 'text-text-main'}`}>
+                  <p className={`text-2xl leading-relaxed font-tibetan ${theme === 'monastery' ? 'text-tibetan-gold' : 'text-wood'}`}>
                     {stanza.tibetan}
                   </p>
                 )}
