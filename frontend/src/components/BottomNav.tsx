@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const BottomNav = ({ activeTab }: { activeTab: string }) => {
   return (
-    <nav className="fixed bottom-0 w-full bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 pb-safe pt-2 px-2 z-40 max-w-md mx-auto left-0 right-0">
+    <nav className="fixed bottom-0 w-full bg-white/95 dark:bg-stone-900/95 backdrop-blur-md border-t border-stone-200 dark:border-stone-800 pb-safe pt-2 px-2 z-40 left-0 right-0 md:hidden">
       <div className="flex justify-around items-end pb-3">
         <Link href="/" className={`flex flex-col items-center gap-1 p-2 ${activeTab === 'home' ? 'text-primary-crimson' : 'text-stone-500'}`}>
           <span className="material-symbols-outlined text-2xl">temple_buddhist</span>

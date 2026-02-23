@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 
 export default function MyBookPage() {
   return (
-    <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased h-screen flex flex-col overflow-hidden relative max-w-md mx-auto shadow-2xl">
+    <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col overflow-hidden relative w-full md:max-w-5xl md:mx-auto md:shadow-2xl">
       <Header
         title="My Book"
         subtitle="ངའི་ཕྱག་དཔེ།"
@@ -15,7 +15,7 @@ export default function MyBookPage() {
         }
       />
 
-      <main className="relative z-10 flex-1 overflow-y-auto pb-24 scrollbar-hide">
+      <main className="relative z-10 flex-1 overflow-y-auto pb-24 md:pb-10 scrollbar-hide">
         <section className="mt-6 mb-8">
           <div className="px-5 mb-4 flex justify-between items-end">
             <h2 className="font-display text-lg font-bold border-l-4 border-primary-crimson pl-3 text-wood dark:text-slate-200">Collections</h2>
