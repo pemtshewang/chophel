@@ -12,7 +12,7 @@ export default function ProfilePage() {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative">
+    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative">
       <Header
         title="Profile"
         subtitle="གང་ཟག་གི་གནས་ཚུལ།"
@@ -24,7 +24,7 @@ export default function ProfilePage() {
         }
       />
 
-      <main className="flex-1 overflow-y-auto pb-24">
+      <main className="flex-1 overflow-y-auto pb-24 md:pb-10">
         {/* User Info Section */}
         <section className="px-6 py-8 flex flex-col items-center border-b border-stone-100 dark:border-stone-800/50">
           <div className="relative mb-4">
