@@ -10,7 +10,7 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
   const [lang, setLang] = useState<"tib" | "pho" | "eng">("tib");
 
   return (
-    <div className={`font-display transition-colors duration-300 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative ${theme === 'monastery' ? 'bg-monastery-bg text-ivory' : 'bg-background-light text-wood'}`}>
+    <div className={`font-display transition-colors duration-300 min-h-screen flex flex-col antialiased w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative ${theme === 'monastery' ? 'bg-monastery-bg text-ivory' : 'bg-background-light text-wood'}`}>
       <Header
         title={prayer.title}
         subtitle={prayer.tibetan}
@@ -51,7 +51,7 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
         </div>
       </div>
 
-      <main className="flex-1 overflow-y-auto px-5 py-8 pb-48 space-y-10 scroll-smooth">
+      <main className="flex-1 overflow-y-auto px-5 md:px-10 py-8 md:py-10 pb-48 md:pb-10 space-y-10 scroll-smooth">
         {prayer.content?.map((stanza, idx) => (
           <div key={idx} className="space-y-10">
             <article className="flex flex-col gap-4 text-center">
@@ -82,8 +82,8 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
         ))}
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 p-4 z-40 max-w-md mx-auto">
-        <div className="relative w-full">
+      <div className="fixed bottom-0 left-0 right-0 p-4 z-40 md:static md:p-0 md:mt-2">
+        <div className="relative w-full md:max-w-sm md:ml-auto">
           <div className={`backdrop-blur-md rounded-2xl shadow-lg border p-4 flex items-center justify-between pr-2 ${theme === 'monastery' ? 'bg-monastery-surface/90 border-white/10' : 'bg-white/90 border-stone-200'}`}>
             <div className="flex flex-col pl-2">
               <span className="text-xs uppercase tracking-widest opacity-60 font-bold mb-1">Mala Count</span>
