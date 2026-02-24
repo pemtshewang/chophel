@@ -12,7 +12,7 @@ export default async function CategoriesPage() {
         subtitle="ཆོས་ཚན་ཁག་"
         showLogo={true}
         actions={
-          <button className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-wood/5 dark:hover:bg-primary-gold/10 text-wood dark:text-primary-gold transition-colors">
+          <button className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-wood/5 dark:hover:bg-[#eadfce] text-wood dark:text-[#b9893a] transition-colors">
             <span className="material-symbols-outlined">search</span>
           </button>
         }

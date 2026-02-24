@@ -13,7 +13,7 @@ export default async function BrowsePage() {
         subtitle="ཆོས་མཛོད།"
         showLogo={true}
         actions={
-          <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-wood/5 dark:hover:bg-primary-gold/10 text-wood dark:text-primary-gold transition-colors">
+          <button className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-wood/5 dark:hover:bg-[#eadfce] text-wood dark:text-[#b9893a] transition-colors">
             <span className="material-symbols-outlined">tune</span>
           </button>
         }
@@ -23,7 +23,7 @@ export default async function BrowsePage() {
         <div className="relative mb-6">
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 material-symbols-outlined">search</span>
           <input
-            className="w-full pl-10 pr-4 py-3 rounded-xl border border-stone-200 bg-white dark:bg-stone-900 dark:border-stone-700 outline-none text-sm shadow-sm focus:ring-2 focus:ring-primary-gold/20 transition-all"
+            className="w-full pl-10 pr-4 py-3 rounded-xl border border-stone-200 bg-white dark:bg-[#f3ece2] dark:border-[#d9cab8] outline-none text-sm shadow-sm focus:ring-2 focus:ring-primary-gold/20 transition-all"
             placeholder="Search prayers, deities..."
             type="text"
           />
@@ -40,13 +40,13 @@ export default async function BrowsePage() {
               <div className="flex-1 flex flex-col gap-1">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="font-display font-bold text-lg text-wood dark:text-stone-100 leading-tight">{prayer.title}</h3>
-                    <p className="font-tibetan text-base text-wood/80 dark:text-stone-300 mt-1">{prayer.tibetan}</p>
+                    <h3 className="font-display font-bold text-lg text-wood dark:text-[#5f4a45] leading-tight">{prayer.title}</h3>
+                    <p className="font-tibetan text-base text-wood/80 dark:text-[#7a625a] mt-1">{prayer.tibetan}</p>
                   </div>
                 </div>
-                <p className="text-sm text-stone-600 dark:text-stone-400 line-clamp-2 mt-1">{prayer.description}</p>
+                <p className="text-sm text-stone-600 dark:text-[#8f776f] line-clamp-2 mt-1">{prayer.description}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
-                  <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-stone-200 text-stone-600 dark:bg-stone-700 dark:text-stone-300">{prayer.lineage}</span>
+                  <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-stone-200 text-stone-600 dark:bg-stone-700 dark:text-[#7a625a]">{prayer.lineage}</span>
                   <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary-crimson/10 text-primary-crimson border border-primary-crimson/20 flex items-center gap-1">
                     <span className="material-symbols-outlined text-[10px]">schedule</span> {prayer.duration}
                   </span>

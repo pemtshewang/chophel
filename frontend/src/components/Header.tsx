@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const defaultBg = transparent
     ? 'bg-gradient-to-b from-black/80 to-transparent'
-    : 'bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-wood/10 dark:border-primary-gold/20 shadow-sm';
+    : 'bg-background-light/95 dark:bg-[#f5efe7]/95 backdrop-blur-md border-b border-wood/10 dark:border-primary-gold/20 shadow-sm';
 
   return (
     <header className={`sticky top-0 z-50 ${className || defaultBg}`}>
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({
           {showBack ? (
             <Link
               href={backHref}
-              className={`${transparent ? 'text-white bg-black/20' : 'text-wood dark:text-primary-gold hover:bg-wood/5 dark:hover:bg-primary-gold/10'} flex size-10 items-center justify-center rounded-full backdrop-blur-sm transition-colors`}
+              className={`${transparent ? 'text-white bg-black/20' : 'text-wood dark:text-[#b9893a] hover:bg-wood/5 dark:hover:bg-[#eadfce]'} flex size-10 items-center justify-center rounded-full backdrop-blur-sm transition-colors`}
             >
               <span className="material-symbols-outlined">arrow_back</span>
             </Link>
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({
           ) : null}
 
           <div className="flex flex-col">
-            <h1 className={`font-display font-bold ${titleClassName || (transparent ? 'text-white text-lg drop-shadow-md' : 'text-wood dark:text-primary-gold text-lg')} leading-none tracking-tight`}>
+            <h1 className={`font-display font-bold ${titleClassName || (transparent ? 'text-white text-lg drop-shadow-md' : 'text-wood dark:text-[#b9893a] text-lg')} leading-none tracking-tight`}>
               {title}
             </h1>
             {subtitle && (

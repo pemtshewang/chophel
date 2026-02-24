@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 
 export default function ReaderClient({ prayer }: { prayer: Prayer }) {
   const [count, setCount] = useState(21);
-  const [theme, setTheme] = useState<"ivory" | "monastery">("monastery");
+  const [theme, setTheme] = useState<"ivory" | "monastery">("ivory");
   const [lang, setLang] = useState<"tib" | "pho" | "eng">("tib");
 
   return (
@@ -26,20 +26,20 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
         }
       />
 
-      <div className={`border-b px-4 py-3 flex flex-col gap-3 transition-colors ${theme === 'monastery' ? 'bg-monastery-surface border-white/10' : 'bg-white border-stone-200'}`}>
+      <div className={`border-b px-4 py-3 flex flex-col gap-3 transition-colors ${theme === 'monastery' ? 'bg-monastery-surface border-[#e3d8cb]' : 'bg-white border-stone-200'}`}>
         <div className="flex items-center justify-between gap-2">
           <div className="flex bg-black/5 dark:bg-white/5 rounded-lg p-1 flex-1">
             <button
               onClick={() => setLang("tib")}
-              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'tib' ? 'bg-white dark:bg-white/10 shadow-sm' : 'text-stone-500'}`}
+              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'tib' ? 'bg-white dark:bg-[#eadfce] shadow-sm' : 'text-stone-500'}`}
             >Tib</button>
             <button
               onClick={() => setLang("pho")}
-              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'pho' ? 'bg-white dark:bg-white/10 shadow-sm' : 'text-stone-500'}`}
+              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'pho' ? 'bg-white dark:bg-[#eadfce] shadow-sm' : 'text-stone-500'}`}
             >Pho</button>
             <button
               onClick={() => setLang("eng")}
-              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'eng' ? 'bg-white dark:bg-white/10 shadow-sm' : 'text-stone-500'}`}
+              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'eng' ? 'bg-white dark:bg-[#eadfce] shadow-sm' : 'text-stone-500'}`}
             >Eng</button>
           </div>
           <button
@@ -99,7 +99,7 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
             </button>
 
             <div className="flex items-center gap-3">
-              <button onClick={() => setCount(0)} className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center">
+              <button onClick={() => setCount(0)} className="w-10 h-10 rounded-full bg-black/5 dark:bg-[#eadfce] flex items-center justify-center">
                 <span className="material-symbols-outlined text-[20px]">restart_alt</span>
               </button>
               <button onClick={() => setCount(count + 1)} className="w-14 h-14 rounded-full bg-primary-gold text-white shadow-lg active:scale-95 flex items-center justify-center">

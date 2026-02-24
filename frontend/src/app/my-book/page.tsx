@@ -9,7 +9,7 @@ export default function MyBookPage() {
         subtitle="ངའི་ཕྱག་དཔེ།"
         showLogo={true}
         actions={
-          <button className="p-2 rounded-full hover:bg-wood/5 dark:hover:bg-primary-gold/10 text-wood dark:text-primary-gold transition-colors">
+          <button className="p-2 rounded-full hover:bg-wood/5 dark:hover:bg-[#eadfce] text-wood dark:text-[#b9893a] transition-colors">
             <span className="material-symbols-outlined">search</span>
           </button>
         }
@@ -47,12 +47,12 @@ export default function MyBookPage() {
           </div>
           <div className="flex flex-col gap-3">
             <div className="relative group rounded-lg overflow-hidden h-24 shadow-sm hover:shadow-md transition-shadow">
-              <div className="absolute inset-0 bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 p-4 flex items-center gap-4 rounded-lg z-10">
+              <div className="absolute inset-0 bg-white dark:bg-[#f6efe5] border border-stone-200 dark:border-[#d9cab8] p-4 flex items-center gap-4 rounded-lg z-10">
                 <div className="h-12 w-12 rounded-full bg-gold-light/40 flex items-center justify-center text-primary-crimson shrink-0 border border-gold/30">
                   <span className="material-symbols-outlined">auto_stories</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-display font-bold text-base truncate text-wood dark:text-stone-100">Seven Line Prayer</h3>
+                  <h3 className="font-display font-bold text-base truncate text-wood dark:text-[#5f4a45]">Seven Line Prayer</h3>
                   <p className="text-xs text-primary-crimson italic">Guru Rinpoche</p>
                 </div>
                 <div className="text-right shrink-0">
