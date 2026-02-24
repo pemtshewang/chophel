@@ -10,7 +10,7 @@ export default async function DeityDetailPage({ params }: { params: Promise<{ id
   if (!deity) return <div>Deity not found</div>;
 
   return (
-    <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden max-w-md mx-auto shadow-2xl relative min-h-screen flex flex-col">
+    <div className="bg-background-light dark:bg-[#f5efe7] font-display text-slate-900 dark:text-stone-800 antialiased overflow-x-hidden w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative min-h-screen flex flex-col">
       <Header
         title="Chöpel"
         showBack={true}
@@ -40,7 +40,7 @@ export default async function DeityDetailPage({ params }: { params: Promise<{ id
         </div>
       </div>
 
-      <div className="flex-1 relative z-10 -mt-4 bg-background-dark rounded-t-3xl border-t border-white/5 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] pb-24">
+      <div className="flex-1 relative z-10 -mt-4 bg-background-dark rounded-t-3xl border-t border-white/5 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] pb-24 md:pb-10">
         <div className="px-6 py-8">
           <h3 className="font-display text-primary-gold text-lg font-bold mb-2">{deity.lineage}</h3>
           <p className="text-slate-300 text-base leading-relaxed opacity-90">{deity.description}</p>

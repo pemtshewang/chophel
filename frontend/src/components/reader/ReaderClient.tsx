@@ -6,11 +6,11 @@ import Header from "@/components/Header";
 
 export default function ReaderClient({ prayer }: { prayer: Prayer }) {
   const [count, setCount] = useState(21);
-  const [theme, setTheme] = useState<"ivory" | "monastery">("monastery");
+  const [theme, setTheme] = useState<"ivory" | "monastery">("ivory");
   const [lang, setLang] = useState<"tib" | "pho" | "eng">("tib");
 
   return (
-    <div className={`font-display transition-colors duration-300 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative ${theme === 'monastery' ? 'bg-monastery-bg text-ivory' : 'bg-background-light text-wood'}`}>
+    <div className={`font-display transition-colors duration-300 min-h-screen flex flex-col antialiased w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative ${theme === 'monastery' ? 'bg-monastery-bg text-wood' : 'bg-background-light text-wood'}`}>
       <Header
         title={prayer.title}
         subtitle={prayer.tibetan}
@@ -26,20 +26,20 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
         }
       />
 
-      <div className={`border-b px-4 py-3 flex flex-col gap-3 transition-colors ${theme === 'monastery' ? 'bg-monastery-surface border-white/10' : 'bg-white border-stone-200'}`}>
+      <div className={`border-b px-4 py-3 flex flex-col gap-3 transition-colors ${theme === 'monastery' ? 'bg-monastery-surface border-[#e3d8cb]' : 'bg-white border-stone-200'}`}>
         <div className="flex items-center justify-between gap-2">
           <div className="flex bg-black/5 dark:bg-white/5 rounded-lg p-1 flex-1">
             <button
               onClick={() => setLang("tib")}
-              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'tib' ? 'bg-white dark:bg-white/10 shadow-sm' : 'text-stone-500'}`}
+              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'tib' ? 'bg-white dark:bg-[#eadfce] shadow-sm' : 'text-stone-500'}`}
             >Tib</button>
             <button
               onClick={() => setLang("pho")}
-              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'pho' ? 'bg-white dark:bg-white/10 shadow-sm' : 'text-stone-500'}`}
+              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'pho' ? 'bg-white dark:bg-[#eadfce] shadow-sm' : 'text-stone-500'}`}
             >Pho</button>
             <button
               onClick={() => setLang("eng")}
-              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'eng' ? 'bg-white dark:bg-white/10 shadow-sm' : 'text-stone-500'}`}
+              className={`flex-1 rounded py-1 px-2 text-xs font-bold transition-all ${lang === 'eng' ? 'bg-white dark:bg-[#eadfce] shadow-sm' : 'text-stone-500'}`}
             >Eng</button>
           </div>
           <button
@@ -51,7 +51,7 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
         </div>
       </div>
 
-      <main className="flex-1 overflow-y-auto px-5 py-8 pb-48 space-y-10 scroll-smooth">
+      <main className="flex-1 overflow-y-auto px-5 md:px-10 py-8 md:py-10 pb-48 md:pb-10 space-y-10 scroll-smooth">
         {prayer.content?.map((stanza, idx) => (
           <div key={idx} className="space-y-10">
             <article className="flex flex-col gap-4 text-center">
@@ -82,9 +82,9 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
         ))}
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 p-4 z-40 max-w-md mx-auto">
-        <div className="relative w-full">
-          <div className={`backdrop-blur-md rounded-2xl shadow-lg border p-4 flex items-center justify-between pr-2 ${theme === 'monastery' ? 'bg-monastery-surface/90 border-white/10' : 'bg-white/90 border-stone-200'}`}>
+      <div className="fixed bottom-0 left-0 right-0 p-4 z-40 md:static md:p-0 md:mt-2">
+        <div className="relative w-full md:max-w-sm md:ml-auto">
+          <div className={`backdrop-blur-md rounded-2xl shadow-lg border p-4 flex items-center justify-between pr-2 ${theme === 'monastery' ? 'bg-monastery-surface/95 border-[#e3d8cb]' : 'bg-white/90 border-stone-200'}`}>
             <div className="flex flex-col pl-2">
               <span className="text-xs uppercase tracking-widest opacity-60 font-bold mb-1">Mala Count</span>
               <div className="flex items-baseline gap-1">
@@ -99,7 +99,7 @@ export default function ReaderClient({ prayer }: { prayer: Prayer }) {
             </button>
 
             <div className="flex items-center gap-3">
-              <button onClick={() => setCount(0)} className="w-10 h-10 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center">
+              <button onClick={() => setCount(0)} className="w-10 h-10 rounded-full bg-black/5 dark:bg-[#eadfce] flex items-center justify-center">
                 <span className="material-symbols-outlined text-[20px]">restart_alt</span>
               </button>
               <button onClick={() => setCount(count + 1)} className="w-14 h-14 rounded-full bg-primary-gold text-white shadow-lg active:scale-95 flex items-center justify-center">
