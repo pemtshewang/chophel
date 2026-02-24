@@ -6,7 +6,7 @@ export default async function CategoriesPage() {
   const categories = await getCategories().catch(() => []);
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased max-w-md mx-auto shadow-2xl relative">
+    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased w-full md:max-w-6xl md:mx-auto md:shadow-2xl relative">
       <Header
         title="Categories"
         subtitle="ཆོས་ཚན་ཁག་"
@@ -18,13 +18,13 @@ export default async function CategoriesPage() {
         }
       />
 
-      <main className="flex-1 pb-24">
-        <div className="relative px-5 pt-8 pb-6 text-center">
+      <main className="flex-1 pb-24 md:pb-10">
+        <div className="relative px-5 md:px-8 pt-8 pb-6 text-center md:text-left">
           <h2 className="font-display text-3xl font-bold text-wood dark:text-stone-100 mb-1">All Categories</h2>
           <h3 className="text-2xl font-tibetan text-wood dark:text-primary-gold opacity-90">ཆོས་ཚན་ཡོངས་རྫོགས།</h3>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 px-5 md:px-8">
           {categories.map((cat) => (
             <div key={cat.id} className={`group relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg ${cat.color || 'bg-stone-500'}`}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
