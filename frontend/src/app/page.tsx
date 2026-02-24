@@ -7,7 +7,7 @@ export default async function BrowsePage() {
   const prayers = await getPrayers().catch(() => []);
 
   return (
-    <div className="bg-background-light dark:bg-[#f5efe7] text-slate-900 dark:text-stone-800 min-h-screen flex flex-col relative overflow-hidden w-full md:max-w-5xl md:mx-auto md:shadow-2xl">
+    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col relative overflow-hidden w-full md:max-w-5xl md:mx-auto md:shadow-2xl">
       <Header
         title="Library"
         subtitle="ཆོས་མཛོད།"
@@ -31,7 +31,7 @@ export default async function BrowsePage() {
 
         {prayers.map((prayer) => (
           <Link href={`/reader/${prayer.id}`} key={prayer.id}>
-            <article className="relative bg-white dark:bg-[#f6efe5] rounded-xl border border-gold/40 dark:border-gold/20 shadow-sm p-4 flex gap-4 transition-transform active:scale-[0.99] mb-4 md:mb-0">
+            <article className="relative bg-white dark:bg-stone-800 rounded-xl border border-gold/40 dark:border-gold/20 shadow-sm p-4 flex gap-4 transition-transform active:scale-[0.99] mb-4 md:mb-0">
               <div className="shrink-0">
                 <div className="w-12 h-12 rounded-full bg-primary-crimson flex items-center justify-center border-2 border-gold/30 shadow-inner">
                   <span className="material-symbols-outlined text-yellow-200 text-2xl">{prayer.icon}</span>

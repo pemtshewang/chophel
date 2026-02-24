@@ -12,7 +12,7 @@ export default function ProfilePage() {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-[#f5efe7] text-slate-900 dark:text-stone-800 min-h-screen flex flex-col antialiased w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative">
+    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative">
       <Header
         title="Profile"
         subtitle="གང་ཟག་གི་གནས་ཚུལ།"

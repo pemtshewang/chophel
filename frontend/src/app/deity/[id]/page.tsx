@@ -10,7 +10,7 @@ export default async function DeityDetailPage({ params }: { params: Promise<{ id
   if (!deity) return <div>Deity not found</div>;
 
   return (
-    <div className="bg-background-light dark:bg-[#f5efe7] font-display text-slate-900 dark:text-stone-800 antialiased overflow-x-hidden w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative min-h-screen flex flex-col">
+    <div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden w-full md:max-w-5xl md:mx-auto md:shadow-2xl relative min-h-screen flex flex-col">
       <Header
         title="Chöpel"
         showBack={true}
